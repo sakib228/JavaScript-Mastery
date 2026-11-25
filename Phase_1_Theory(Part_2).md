@@ -1,4 +1,5 @@
-1. What is break?break হলো এমন একটি statement যা loop বা switch থেকে তৎক্ষণাৎ বেরিয়ে আসে।
+1. What is break?
+break হলো এমন একটি statement যা loop বা switch থেকে তৎক্ষণাৎ বেরিয়ে আসে।
 যেই মুহূর্তে break পায়, সেই loop/switch আর চালায় না।
 
 code :
@@ -10,7 +11,8 @@ for (let i = 1; i <= 10; i++) {
 }
 
 ----------------------------------------------
-2. What is continue?continue হলো এমন statement যা বর্তমান iteration skip করে পরের iteration-এ চলে যায়।
+2. What is continue?
+continue হলো এমন statement যা বর্তমান iteration skip করে পরের iteration-এ চলে যায়।
 loop থেমে যায় না, শুধু সেইবারের বাকি কোড skip হয়।
 
 code :
@@ -29,7 +31,8 @@ for (let i = 1; i <= 5; i++) {
 | ব্যবহার | নির্দিষ্ট condition পূরণ হলে থামানো | নির্দিষ্ট value skip করতে |
 ----------------------------------------------
 
-4. Can we use break in a switch statement?হ্যাঁ, অবশ্যই।
+4. Can we use break in a switch statement?
+হ্যাঁ, অবশ্যই।
 switch-এ break না দিলে fall-through হয় (নিচের case-গু
 
 code :
@@ -50,7 +53,8 @@ switch (day) {
 }
 ----------------------------------------------
 
-5. What happens if continue executes?continue execute হলে:
+5. What happens if continue executes?
+continue execute হলে:
 সেই iteration-এর বাকি কোডগুলো skip হয়
 loop-এর পরবর্তী iteration শুরু হয় (condition check করে)
 
@@ -61,6 +65,4 @@ for (let i = 1; i <= 6; i++) {
   }
   console.log(i);       // শুধু odd সংখ্যা print হবে → 1 3 5
 }
-
-
 
