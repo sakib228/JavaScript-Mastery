@@ -51,3 +51,47 @@ function getGrade(marks) {
 function isLeapYear(year) {
   return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
 }
+// 9. Calculator using switch
+function calculatorSwitch(a, b, op) {
+  switch (op) {
+    case '+': return a + b;
+    case '-': return a - b;
+    case '*': return a * b;
+    case '/': return b !== 0 ? a / b : "Error";
+    default: return "Invalid operator";
+  }
+}
+// 10. Divisible by both 5 and 11
+function divisibleBy5And11(num) {
+  return num % 5 === 0 && num % 11 === 0;
+}
+
+// 11. Even numbers 1 to 50
+function printEven() {
+  for (let i = 2; i <= 50; i += 2) {
+    console.log(i);
+  }
+}
+
+// 12. Odd numbers 1 to 50
+function printOdd() {
+  for (let i = 1; i <= 50; i += 2) {
+    console.log(i);
+  }
+}
+
+// 13. Sum of 1 to 100
+function sum1to100() {
+  let sum = 0;
+  for (let i = 1; i <= 100; i++) {
+    sum += i;
+  }
+  return sum; // 5050
+}
+
+// 14. Multiplication table of 5
+function tableOf5() {
+  for (let i = 1; i <= 10; i++) {
+    console.log(`5 x ${i} = ${5 * i}`);
+  }
+}
