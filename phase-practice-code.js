@@ -95,3 +95,65 @@ function tableOf5() {
     console.log(`5 x ${i} = ${5 * i}`);
   }
 }
+// 15. Factorial
+function factorial(n) {
+  let result = 1;
+  for (let i = 1; i <= n; i++) {
+    result *= i;
+  }
+  return result;
+}
+
+// 16. Reverse a number
+function reverseNumber(num) {
+  let rev = 0;
+  while (num > 0) {
+    rev = rev * 10 + (num % 10);
+    num = Math.floor(num / 10);
+  }
+  return rev;
+}
+
+// 17. Count digits
+function countDigits(num) {
+  if (num === 0) return 1;
+  let count = 0;
+  while (num > 0) {
+    count++;
+    num = Math.floor(num / 10);
+  }
+  return count;
+}
+
+// 18. Sum of digits
+function sumOfDigits(num) {
+  let sum = 0;
+  while (num > 0) {
+    sum += num % 10;
+    num = Math.floor(num / 10);
+  }
+  return sum;
+}
+
+// 19. Check Prime
+function isPrime(num) {
+  if (num <= 1) return false;
+  for (let i = 2; i * i <= num; i++) {
+    if (num % i === 0) return false;
+  }
+  return true;
+}
+
+// 20. Fibonacci Series
+function fibonacci(n) {
+  let a = 0, b = 1;
+  console.log(a);
+  if (n > 1) console.log(b);
+  
+  for (let i = 3; i <= n; i++) {
+    let next = a + b;
+    console.log(next);
+    a = b;
+    b = next;
+  }
+}
