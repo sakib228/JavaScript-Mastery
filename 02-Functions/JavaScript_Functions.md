@@ -188,13 +188,14 @@ Function call করার সময় যে value পাঠানো হয় স�
 Example :
 
 function add(a, b) {
-  console.log(a + b);
+console.log(a + b);
 }
 
 add(10, 20);
 
 Expected Output :
 30
+
 Understanding ~
 
 function add(a, b)
