@@ -212,7 +212,7 @@ console.log(fruits);
 ```
 
 **Explanation:**  
-এখানে `index 1`-এ থাকা `"Banana"` পরিবর্তন করে `"Orange"` করা হয়েছে। এভাবে `const` দিয়ে declare করা array-এরও ভেতরের element update করা যায়।
+এখানে `index 1`-এ থাকা `"Banana"` পরিবর্তন করে `"Orange"` করা হয়েছে। Array-এর element update করা যায়।
 
 ---
 
@@ -244,6 +244,14 @@ console.log(fruits[fruits.length - 1]);
 ```
 
 **Expected Output:**
+```text
+Mango
+```
+
+**Explanation:**  
+Array-এর `length` হলো `3`। তাই শেষ index: `3 - 1 = 2`, এবং `fruits[2]` এর ফলাফল হলো `"Mango"`।
+
+---
 
 ## 07. Real-world Examples
 
@@ -409,7 +417,7 @@ Mango
 ```
 
 **Explanation:**  
-প্রথমে `i = 0`, তারপর `fruits[0]` থেকে `"Apple"` print হয়। এরপর `i`-এর value বাড়তে থাকে (`1`, `2`) এবং পরবর্তী element print হয়।
+প্রথমে `i = 0`, তারপর `fruits[0]` থেকে `"Apple"` print হয়। এরপর `i`-এর value বাড়তে থাকে এবং পরবর্তী element print হয়।
 
 ### Example: `for...of` Loop
 ```javascript
@@ -537,9 +545,192 @@ console.log(numbers);
 ```text
 [ 100, 20, 30 ]
 ```
+
+---
+
+## 11. Interview Questions
+
+### Q1. What is an array in JavaScript?
+* **English:** An array is a special object used to store multiple values in a single variable.
+* **বাংলা:** Array হলো JavaScript-এর একটি special object, যেখানে একটি variable-এর মধ্যে একাধিক value রাখা যায়।
+
+### Q2. Why do we use arrays?
+* **English:** Arrays help us store, organize, and manage multiple related values efficiently.
+* **বাংলা:** একাধিক related data একসাথে store এবং manage করার জন্য array ব্যবহার করা হয়।
+
+### Q3. What is array indexing?
+* **English:** Array indexing is the process of accessing elements using their index numbers.
+* **বাংলা:** Index number ব্যবহার করে array-এর element access করাকে array indexing বলে।
+
+### Q4. What is zero-based indexing?
+* **English:** Zero-based indexing means the first element starts at index `0`.
+* **বাংলা:** Zero-based indexing মানে array-এর প্রথম element-এর index `0`।
+
+### Q5. What is the `length` property?
+* **English:** The `length` property returns the number of elements in an array.
+* **বাংলা:** `length` property array-এর মোট element সংখ্যা return করে।
+
+### Q6. Can an array store different data types?
+* **English:** Yes, JavaScript arrays can store values of different data types.
+* **বাংলা:** হ্যাঁ, JavaScript array-এর মধ্যে বিভিন্ন data type-এর value রাখা যায়।
+
+### Q7. What is the difference between `push()` and `pop()`?
+* **English:** `push()` adds elements to the end of an array, while `pop()` removes the last element.
+* **বাংলা:** `push()` array-এর শেষে element যোগ করে এবং `pop()` শেষ element remove করে।
+
+### Q8. What happens when we access an invalid array index?
+* **English:** Accessing an index that has no element usually returns `undefined`.
+* **বাংলা:** Array-এর এমন index access করলে যেখানে কোনো element নেই, সাধারণত `undefined` পাওয়া যায়।
+
+---
+
+## 12. Practice Problems
+
+### Beginner Level
+
+#### Problem 1: Create an Array
+Create an array named `fruits` containing: `Apple`, `Banana`, `Mango`. Print the array.
 ```text
-Mango
+Expected Output:
+[ 'Apple', 'Banana', 'Mango' ]
 ```
 
-**Explanation:**  
-Array-এর `length` হলো `3`। তাই শেষ index: `3 - 1 = 2`, এবং `fruits[2]` এর ফলাফল হলো `"Mango"`।
+#### Problem 2: Access Array Elements
+Create an array:
+```javascript
+const colors = ["Red", "Green", "Blue"];
+```
+Print the elements:
+* First element
+* Second element
+* Third element
+```text
+Expected Output:
+Red
+Green
+Blue
+```
+
+#### Problem 3: Find Array Length
+Create an array containing five numbers. Print the total number of elements.
+```text
+Expected Output:
+5
+```
+
+#### Problem 4: Update an Array
+Given:
+```javascript
+const fruits = ["Apple", "Banana", "Mango"];
+```
+Change `"Banana"` to `"Orange"`.
+```text
+Expected Output:
+[ 'Apple', 'Orange', 'Mango' ]
+```
+
+---
+
+### Intermediate Level
+
+#### Problem 5: Add an Element
+Given:
+```javascript
+const numbers = [10, 20, 30];
+```
+Add `40` to the end of the array using `push()`.
+```text
+Expected Output:
+[ 10, 20, 30, 40 ]
+```
+
+#### Problem 6: Remove the Last Element
+Given:
+```javascript
+const fruits = ["Apple", "Banana", "Mango"];
+```
+Remove the last element using `pop()`.
+```text
+Expected Output:
+[ 'Apple', 'Banana' ]
+```
+
+#### Problem 7: Print Array Elements
+Given:
+```javascript
+const numbers = [10, 20, 30, 40, 50];
+```
+Use a `for` loop to print every element.
+```text
+Expected Output:
+10
+20
+30
+40
+50
+```
+
+#### Problem 8: Find the Last Element
+Given:
+```javascript
+const fruits = ["Apple", "Banana", "Mango"];
+```
+Print the last element without directly using index `2`.
+```text
+Expected Output:
+Mango
+```
+> **Hint:** `array[array.length - 1]`
+
+---
+
+### Challenge Problems
+
+#### Problem 9: Calculate Total Marks
+Given:
+```javascript
+const marks = [80, 75, 90, 85, 70];
+```
+Calculate the total marks using a loop.
+```text
+Expected Output:
+400
+```
+
+#### Problem 10: Find the Largest Number
+Given:
+```javascript
+const numbers = [10, 45, 20, 80, 35];
+```
+Find the largest number using a loop.
+```text
+Expected Output:
+80
+```
+
+---
+
+## 13. Summary
+
+| Concept | Meaning |
+| :--- | :--- |
+| **Array** | Stores multiple values |
+| **Element** | A value inside an array |
+| **Index** | Position of an element |
+| **Zero-based Indexing** | First element starts at `0` |
+| **`length`** | Total number of elements |
+| **`push()`** | Adds element at the end |
+| **`pop()`** | Removes element from the end |
+| **`shift()`** | Removes element from the beginning |
+| **`unshift()`** | Adds element at the beginning |
+| **Loop** | Accesses elements one by one |
+
+### Final Reminder
+* JavaScript arrays store multiple values in one variable.
+* Array indexing starts from `0`.
+* Use `length` to find the total number of elements.
+* Use `push()` and `pop()` to manage array elements.
+* Use loops to access array elements.
+* Arrays are one of the most important foundations of JavaScript.
+
+Keep practicing arrays because they are widely used in JavaScript, React, API data handling, and real-world web development.
