@@ -244,6 +244,299 @@ console.log(fruits[fruits.length - 1]);
 ```
 
 **Expected Output:**
+
+## 07. Real-world Examples
+
+### Example 1: Student Names
+```javascript
+const students = ["Sakib", "Rahim", "Karim", "Hasan"];
+
+console.log(students);
+```
+
+**Expected Output:**
+```text
+[ 'Sakib', 'Rahim', 'Karim', 'Hasan' ]
+```
+
+> **Real-life Use Case:** School বা college-এর student list তৈরি করতে array ব্যবহার করা যায়।
+
+### Example 2: Product List
+```javascript
+const products = ["Laptop", "Mobile", "Keyboard", "Mouse"];
+
+console.log(products);
+```
+
+**Expected Output:**
+```text
+[ 'Laptop', 'Mobile', 'Keyboard', 'Mouse' ]
+```
+
+> **Real-life Use Case:** E-commerce website-এ product list store করতে array ব্যবহার করা হয়।
+
+### Example 3: Student Marks
+```javascript
+const marks = [85, 90, 78, 92, 88];
+
+console.log(marks);
+```
+
+**Expected Output:**
+```text
+[ 85, 90, 78, 92, 88 ]
+```
+
+> **Real-life Use Case:** Student-এর exam marks store এবং calculate করতে array ব্যবহার করা যায়।
+
+### Example 4: Shopping Cart
+```javascript
+const cart = ["Shirt", "Shoes", "Watch"];
+
+console.log(cart);
+```
+
+**Expected Output:**
+```text
+[ 'Shirt', 'Shoes', 'Watch' ]
+```
+
+> **Real-life Use Case:** Online shopping website-এ user-এর cart-এর products store করতে array ব্যবহার করা হয়।
+
+---
+
+## 08. Array Methods
+
+JavaScript array-এর মধ্যে অনেক built-in method রয়েছে। এই method-গুলো array-এর data add, remove এবং manage করতে সাহায্য করে।
+
+### 1. `push()`
+Array-এর শেষে নতুন element যোগ করে।
+
+```javascript
+const fruits = ["Apple", "Banana"];
+
+fruits.push("Mango");
+
+console.log(fruits);
+```
+
+**Output:**
+```text
+[ 'Apple', 'Banana', 'Mango' ]
+```
+
+### 2. `pop()`
+Array-এর শেষ element remove করে।
+
+```javascript
+const fruits = ["Apple", "Banana", "Mango"];
+
+fruits.pop();
+
+console.log(fruits);
+```
+
+**Output:**
+```text
+[ 'Apple', 'Banana' ]
+```
+
+### 3. `unshift()`
+Array-এর শুরুতে নতুন element যোগ করে।
+
+```javascript
+const fruits = ["Banana", "Mango"];
+
+fruits.unshift("Apple");
+
+console.log(fruits);
+```
+
+**Output:**
+```text
+[ 'Apple', 'Banana', 'Mango' ]
+```
+
+### 4. `shift()`
+Array-এর প্রথম element remove করে।
+
+```javascript
+const fruits = ["Apple", "Banana", "Mango"];
+
+fruits.shift();
+
+console.log(fruits);
+```
+
+**Output:**
+```text
+[ 'Banana', 'Mango' ]
+```
+
+### Summary
+
+| Method | কাজ |
+| :--- | :--- |
+| **`push()`** | শেষে element যোগ করে |
+| **`pop()`** | শেষে element remove করে |
+| **`unshift()`** | শুরুতে element যোগ করে |
+| **`shift()`** | শুরু থেকে element remove করে |
+
+---
+
+## 09. Loop with Arrays
+
+**English Explanation:**  
+Loops allow us to access and process array elements one by one.
+
+**সহজ বাংলা Explanation:**  
+Array-এর প্রতিটি element আলাদাভাবে access করার জন্য loop ব্যবহার করা যায়। এতে বারবার index লিখতে হয় না।
+
+### Example: `for` Loop
+```javascript
+const fruits = ["Apple", "Banana", "Mango"];
+
+for (let i = 0; i < fruits.length; i++) {
+  console.log(fruits[i]);
+}
+```
+
+**Expected Output:**
+```text
+Apple
+Banana
+Mango
+```
+
+**Explanation:**  
+প্রথমে `i = 0`, তারপর `fruits[0]` থেকে `"Apple"` print হয়। এরপর `i`-এর value বাড়তে থাকে (`1`, `2`) এবং পরবর্তী element print হয়।
+
+### Example: `for...of` Loop
+```javascript
+const fruits = ["Apple", "Banana", "Mango"];
+
+for (const fruit of fruits) {
+  console.log(fruit);
+}
+```
+
+**Expected Output:**
+```text
+Apple
+Banana
+Mango
+```
+
+> **Important:** `for...of` loop array-এর প্রতিটি element সরাসরি access করতে সাহায্য করে।
+
+---
+
+## 10. Common Mistakes
+
+### Mistake 1: Using Incorrect Index
+```javascript
+const fruits = ["Apple", "Banana", "Mango"];
+
+console.log(fruits[3]);
+```
+
+**Output:**
+```text
+undefined
+```
+
+**Why?**  
+Array-এর valid index হলো `0`, `1`, `2`। Index `3`-এ কোনো element নেই।
+
+### Mistake 2: Forgetting Zero-based Indexing
+```javascript
+const fruits = ["Apple", "Banana", "Mango"];
+
+console.log(fruits[1]);
+```
+
+**Output:**
+```text
+Banana
+```
+
+অনেকে মনে করে index `1` মানে প্রথম element। কিন্তু JavaScript-এ index `0` থেকে শুরু হয়।
+
+### Mistake 3: Using `length` as Last Index
+```javascript
+const numbers = [10, 20, 30];
+
+console.log(numbers[numbers.length]);
+```
+
+**Output:**
+```text
+undefined
+```
+
+**Correct:**
+```javascript
+console.log(numbers[numbers.length - 1]);
+```
+
+**Output:**
+```text
+30
+```
+
+### Mistake 4: Confusing Array and String
+```javascript
+const fruits = "Apple, Banana, Mango";
+
+console.log(fruits[0]);
+```
+
+**Output:**
+```text
+A
+```
+
+এটি array নয়, string।
+
+**Correct:**
+```javascript
+const fruits = ["Apple", "Banana", "Mango"];
+
+console.log(fruits[0]);
+```
+
+**Output:**
+```text
+Apple
+```
+
+### Mistake 5: Reassigning a `const` Array
+```javascript
+const numbers = [10, 20, 30];
+
+numbers = [40, 50, 60];
+```
+
+**Output:**
+```text
+TypeError
+```
+
+কারণ `const` variable-কে নতুন array দিয়ে reassign করা যায় না। তবে array-এর element পরিবর্তন করা যায়।
+
+**Correct:**
+```javascript
+const numbers = [10, 20, 30];
+
+numbers[0] = 100;
+
+console.log(numbers);
+```
+
+**Output:**
+```text
+[ 100, 20, 30 ]
+```
 ```text
 Mango
 ```
